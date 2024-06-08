@@ -29,6 +29,16 @@
                 <textarea class= "form-control" id="commentbox" rows= "20"></textarea>
              </div>
              </div>  
+      <div id="commentSection">
+        <div class="comment" id="comment1">
+            <p>User1: This is a comment.</p>
+            <button onclick="showReplyForm('replyForm1')">Reply</button>
+            <div class="reply-form" id="replyForm1">
+                <textarea id="replyText1" rows="3" cols="30"></textarea><br>
+                <button onclick="addReply('comment1', 'replyText1', 'replyForm1')">Submit Reply</button>
+            </div>
+        </div>
+    </div>
        </div>
       <script src="index.js"> </script>
    </body>
