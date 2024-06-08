@@ -26,7 +26,7 @@
                 Comments <br>
                 <input class= "form-control" type="text" id= "comment"/>
                 <button class="btn btn-primary" id=submit> Submit </button>
-                <textarea class= "form-control" id="commentbox" rows= "20"></textarea>
+                <textarea class= "form-control" id="commentbox" rows= "24"></textarea>
              </div>
              </div>  
        <style>
@@ -43,11 +43,10 @@
     </style>
       <div id="commentSection">
         <div class="comment" id="comment1">
-            <p>User1:</p>
-            <button onclick="showReplyForm('replyForm1')">Reply</button>
+            <button onclick="showReplyForm('replyForm2')">Reply</button>
             <div class="reply-form" id="replyForm1">
-                <textarea id="replyText1" rows="3" cols="4"></textarea><br>
-                <button onclick="addReply('comment1', 'replyText1', 'replyForm1')">Submit Reply</button>
+                <textarea id="replyText2" rows="3" cols="4"></textarea><br>
+                <button onclick="addReply('comment2', 'replyText2', 'replyForm2')">Submit Reply</button>
             </div>
         </div>
     </div>
