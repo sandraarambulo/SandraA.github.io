@@ -29,32 +29,26 @@ function submitComment(){
 commentbox.textContent += comment.value.toString() + "\n"
 comment.value="";
 }
-function showReplyForm(formId) {
-    var form = document.getElementById(formId);
-    if (form.style.display === "none" || form.style.display === "") {
-        form.style.display = "block";
-    } else {
-        form.style.display = "none";
-    }
-}
+ function showReplyForm(commentId) {
+            document.getElementById('reply-form-' + commentId).style.display = 'block';
+        }
 
-function addReply(commentId, replyTextId, formId) {
-    var commentDiv = document.getElementById(commentId);
-    var replyText = document.getElementById(replyTextId).value;
-    
-    if (replyText.trim() === "") {
-        alert("Reply cannot be empty!");
-        return;
-    }
+        function submitReply(commentId) {
+            const replyText = document.getElementById('reply-text-' + commentId).value;
+            if (replyText.trim() === "") {
+                alert("Reply cannot be empty!");
+                return;
+            }
 
-    var replyDiv = document.createElement("div");
-    replyDiv.className = "reply";
-    replyDiv.innerHTML = "<p>User2: " + replyText + "</p>";
+            const replyContainer = document.getElementById('replies-' + commentId);
+            const newReply = document.createElement('div');
+            newReply.className = 'comment';
+            newReply.innerHTML = `<p>${replyText}</p>`;
+            replyContainer.appendChild(newReply);
 
-    commentDiv.appendChild(replyDiv);
-    
-    document.getElementById(replyTextId).value = "";
-    document.getElementById(formId).style.display = "none";
+            // Clear the textarea and hide the reply form
+            document.getElementById('reply-text-' + commentId).value = '';
+            document.getElementById('reply-form-' + commentId).style.display = 'none';
 }
 
 btnLike1.addEventListener("click",clickLike1)
