@@ -57,7 +57,7 @@ function addReply(commentId, replyTextId, formId) {
     document.getElementById(formId).style.display = "none";
 }
 
-}
+
 
 btnLike1.addEventListener("click",clickLike1)
 btnLike2.addEventListener("click",clickLike2)
