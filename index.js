@@ -29,36 +29,6 @@ function submitComment(){
 commentbox.textContent += comment.value.toString() + "\n"
 comment.value="";
 }
-function showReplyForm(formId) {
-    var form = document.getElementById(formId);
-    if (form.style.display === "none" || form.style.display === "") {
-        form.style.display = "block";
-    } else {
-        form.style.display = "none";
-    }
-}
-
-function addReply(commentId, replyTextId, formId) {
-    var commentDiv = document.getElementById(commentId);
-    var replyText = document.getElementById(replyTextId).value;
-    
-    if (replyText.trim() === "") {
-        alert("Reply cannot be empty!");
-        return;
-    }
-
-    var replyDiv = document.createElement("div");
-    replyDiv.className = "reply";
-    replyDiv.innerHTML = "<p>User2: " + replyText + "</p>";
-
-    commentDiv.appendChild(replyDiv);
-    
-    document.getElementById(replyTextId).value = "";
-    document.getElementById(formId).style.display = "none";
-}
-
-
-
 btnLike1.addEventListener("click",clickLike1)
 btnLike2.addEventListener("click",clickLike2)
 btnDislike1.addEventListener("click",clickDislike1)
