@@ -6,6 +6,14 @@ const btnDislike1 = document.getElementById("btnDislike1")
 const countDislike1 = document.getElementById("countDislike1")
 const btnDislike2 = document.getElementById("btnDislike2")
 const countDislike2 = document.getElementById("countDislike2")
+const btnheart1 = document.getElementById("btnheart1")
+const countheart1 = document.getElementById("countheart1")
+const btnheart2 = document.getElementById("btnheart2")
+const countheart2 = document.getElementById("countheart2")
+const btnwow1 = document.getElementById("btnwow1")
+const countwow1 = document.getElementById("countwow1")
+const btnwow2 = document.getElementById("btnwow2")
+const countwow2 = document.getElementById("countwow2")
 const submit = document.getElementById("submit")
 const comment = document.getElementById("comment")
 const commentbox = document.getElementById("commentbox")
@@ -25,6 +33,22 @@ function clickDislike2(){
   let totalDislikes2 = parseInt(countDislikes2.value) + 1
   countDislikes2.textContent = totalDislikes2.toString()
 }
+function clickheart1(){
+    let totalLikes1 = parseInt(countheart1.value) + 1
+    countheart1.textContent = totalLikes1.toString()
+  }
+function clickheart2(){
+    let totalLikes1 = parseInt(countheart2.value) + 1
+    countheart2.textContent = totalLikes1.toString()
+  }
+function clickwow1(){
+    let totalLikes1 = parseInt(countwow1.value) + 1
+    countwow1.textContent = totalLikes1.toString()
+  }
+function clickwow2(){
+    let totalLikes1 = parseInt(countwow2.value) + 1
+    countwow2.textContent = totalLikes1.toString()
+  }
 function submitComment(){
 commentbox.textContent += comment.value.toString() + "\n"
 comment.value="";
@@ -33,4 +57,8 @@ btnLike1.addEventListener("click",clickLike1)
 btnLike2.addEventListener("click",clickLike2)
 btnDislike1.addEventListener("click",clickDislike1)
 btnDislike2.addEventListener("click",clickDislike2)
+btnheart1.addEventListener("click",clickheart1)
+btnheart2.addEventListener("click",clickheart2)
+btnwow1.addEventListener("click",clickwow1)
+btnwow2.addEventListener("click",clickwow2)
 submit.addEventListener("click",submitComment)
