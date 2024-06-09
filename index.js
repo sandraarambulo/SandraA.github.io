@@ -29,18 +29,6 @@ function clickheart1(){
     let totalLikes1 = parseInt(countheart1.value) + 1
     countheart1.textContent = totalLikes1.toString()
   }
-function clickheart2(){
-    let totalLikes1 = parseInt(countheart2.value) + 1
-    countheart2.textContent = totalLikes1.toString()
-  }
-function clickwow1(){
-    let totalLikes1 = parseInt(countwow1.value) + 1
-    countwow1.textContent = totalLikes1.toString()
-  }
-function clickwow2(){
-    let totalLikes1 = parseInt(countwow2.value) + 1
-    countwow2.textContent = totalLikes1.toString()
-  }
 function submitComment(){
 commentbox.textContent += comment.value.toString() + "\n"
 comment.value="";
@@ -49,8 +37,4 @@ btnLike1.addEventListener("click",clickLike1)
 btnLike2.addEventListener("click",clickLike2)
 btnDislike1.addEventListener("click",clickDislike1)
 btnDislike2.addEventListener("click",clickDislike2)
-btnheart1.addEventListener("click",clickheart1)
-btnheart2.addEventListener("click",clickheart2)
-btnwow1.addEventListener("click",clickwow1)
-btnwow2.addEventListener("click",clickwow2)
 submit.addEventListener("click",submitComment)
